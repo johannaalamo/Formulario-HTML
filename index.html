@@ -13,51 +13,51 @@
 <body>
   <body class="p-3 m-0 border-0 bd-example m-0 border-0">
     
-    <div class="card">
+    <div class="carta mb-2">
       <div class="card-header">
         <h2>Payment form example</h2>
       </div>
       <div class="card-body">
         
         <form>
-          <div class="row mb-3">
+          <div class="row mb-2">
             <div class="col-5">
-            <label for="exampleInputCardNumber" class="form-label">Card #</label>
-            <input type="CardNumber" class="form-control" id="exampleInputCardNumber" aria-describedby="CardHelp" placeholder="xxxxxx">
-            <div id="CardHelp" class="form-text"></div>
+            <label for="card" class="form-label">Card #</label>
+            <input type="text" id="card" class="form-control" name="card" pattern="[0-9]{1,16}" maxlength="16"  placeholder="xxxxxxxxxxxxxxxx" required>
+            </div>
+
+              <div class="col-3 mb-2">
+              <label for="cvc" class="form-label">CVC #</label>
+              <input ntype="text" id="cvc" pattern="[0-9]{1,3}" maxlength="3" class="form-control" required="" placeholder="000">
+            </div>
+
+            <div class="col-4 mb-2">
+              <label for="amount" class="form-label">Amount</label>
+              <div class="input-group has-validation">
+                <span class="input-group-text" id="inputGroupPrepend">$</span>
+                <input type="number" min="0" class="form-control" id="amount" aria-describedby="inputGroupPrepend" required="" placeholder="Amount">
+                <div class="invalid-feedback">
+            </div>
+              </div>
+            </div>
           </div>
-        
 
-              <div class="col-3 mb-3">
-              <label for="exampleInputCVC" class="form-label">CVC #</label>
-              <input type="CVC" class="form-control" id="exampleInputCVC" aria-describedby="CVCHelp" placeholder="0000">
-              <div id="CVCHelp" class="form-text"></div>
-            </div>
-
-            <div class="col-4 mb-3">
-              <label for="exampleInputAmount" class="form-label">Amount $</label>
-              <input type="Amount" class="form-control" id="exampleInputAmount" aria-describedby="AmountHelp" placeholder="Amount">
-              <div id="AmountHelp" class="form-text"></div>
-            </div>
-
-            </div>
-
-          <div class="row mb-3">
+          <div class="row mb-2">
             <div class="col-6">
             <label for="exampleInputFirstName" class="form-label">First Name</label>
-            <input type="FirstName" class="form-control" id="exampleInputFirstName">
+            <input type="text" class="form-control" id="exampleInputFirstName">
           </div>
 
           <div class="col-6">
             <label for="exampleInputLastName" class="form-label">Last Name</label>
-            <input type="LastName" class="form-control" id="exampleInputLastName">
+            <input type="text" class="form-control" id="exampleInputLastName">
           </div>
         </div>
 
-        <div class="row mb-3">
+        <div class="row mb-2">
           <div class="col-6">
           <label for="exampleInputCity" class="form-label">City</label>
-          <input type="city" class="form-control" id="exampleInputCity">
+          <input type="text" class="form-control" id="exampleInputCity">
         </div>
         
           <div class="col-3">
@@ -72,25 +72,57 @@
         
 
         <div class="col-3">
-          <label for="exampleInputPassword1" class="form-label">Postal code</label>
-          <input type="password" class="form-control" id="exampleInputPassword1">
+          <label for="exampleInputPostalcode" class="form-label">Postal code</label>
+          <input type="number" class="form-control" id="exampleInputPostalcode">
         </div>
       </div>
       
-      <div class="row mb-3">
-        <div class="col-3">
-        <label for="exampleInputPassword1" class="form-label">We accept:</label>
-        <input type="password" class="form-control " id="exampleInputPassword1">
-      </div>
+      <div class="row mb-2">
+        <div class="col-2">
+        <label for="exampleSelectType" class="form-label">We accept:</label>
+        <nav class="navbar bg-body-tertiary">
 
-      <div class="col-md-6 ms-auto">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              <i class="fab fa-cc-visa"></i>
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              <i class="fab fa-cc-mastercard"></i>
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              <i class="fab fa-cc-amex"></i>
+            </label>
+          </div>
+
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+            <label class="form-check-label" for="flexRadioDefault1">
+              <i class="fab fa-cc-diners-club"></i>
+            </label>
+          </div>
+
+        </nav>
+        </div>
+
+        <div class="col-6 ms-auto">
           <label for="exampleFormControlTextarea1" class="form-label">Message</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-          <div id="emailHelp" class="form-text">Add any notes here.</div>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+          <div id="text" class="form-text">Add any notes here.</div>
         </div>
       </div>
     </div>
+      </div>
 
+  
     <div class="card-footer text-end">
       <a href="#" class="btn btn-secondary">Cancel</a>
       <a href="#" class="btn btn-primary">Send</a>
